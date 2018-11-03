@@ -1,13 +1,13 @@
-var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-queryURL += '?' + $.param({
- 'api-key': "749c632c403b429383ae2c86692e4500",
- 'q': "car",
- 'begin_date': "19900101",
- 'end_date': "20000101"
-});
-$.ajax({
-url: queryURL,
-method: "GET"
-}).then(function(response) {
 
-console.log(response);});
+ 
+ 
+ var config = {
+   apiKey: "AIzaSyB59Y9d2vxVuuUhuYgL0jqdjBJs6RvAEgI",
+   authDomain: "eventfinder-f4e7e.firebaseapp.com",
+   databaseURL: "https://eventfinder-f4e7e.firebaseio.com",
+   projectId: "eventfinder-f4e7e",
+   storageBucket: "eventfinder-f4e7e.appspot.com",
+   messagingSenderId: "755767002779"
+ };
+ firebase.initializeApp(config);
+
