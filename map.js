@@ -1,3 +1,16 @@
+$('#submitButton').on('click', function(){
+  var zipCode = $('#zipCode').val().trim();
+
+  var cuisineChoice = $('#topicInput').val().trim();
+
+  console.log(cuisineChoice);
+  console.log(zipCode);
+
+  return false;
+});
+
+
+
 function initMap(){
     // Map options
     var options = {
