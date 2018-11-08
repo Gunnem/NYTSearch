@@ -97,4 +97,36 @@ var lngPush = []
          
           restInfo()  
          
+
+     
+
+     $("#bbq").on("click", function(event) {
+        cityCuisine = 193;
+        console.log(cityCuisine);
+      });
+          
+      $("#greek").on("click", function(event) {
+        cityCuisine = 156;
+        console.log(cityCuisine);
+      });
+          
+      $("#thai").on("click", function(event) {
+        cityCuisine = 95;
+        console.log(cityCuisine);
+      });
+          
+      $("#chinese").on("click", function(event) {
+        cityCuisine = 25;
+        console.log(cityCuisine);
+      });
+          
+      $("#pizza").on("click", function(event) {
+        cityCuisine = 82;
+        console.log(cityCuisine);
+      });
+
+      $("#burgers").on("click", function(event) {
+        cityCuisine = 168;
+        console.log(cityCuisine);
+      });
           
