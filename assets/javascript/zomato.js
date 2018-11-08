@@ -1,6 +1,6 @@
 // Set global variables
 // These variables are filled in for now. They'll be what user enters.
-var cityName = "Berkeley";
+var cityName = "Santa Barbara";
 // var cuisineType = "afghani";
 var cityNumber= [];
 console.log(cityNumber);
@@ -94,7 +94,7 @@ console.log(cityCuisine);
              
              }
             
-            }) }, 1000); 
+            }) }, 2000); 
           }
          
           restInfo()  
