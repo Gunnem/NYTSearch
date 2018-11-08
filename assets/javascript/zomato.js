@@ -66,14 +66,14 @@ console.log(cityCuisine);
     // Function that uses cityNumber and cityCuisine results into the query paramters to retrieve restaurant info.
     function restInfo(){
       setTimeout(function(){
-        var queryURL3 = 
-        "https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?city_id=" + cityNumber[0] + "&entity_type=zone&radius=25&cuisines=1"
+        var queryURL2 = 
+        "https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?city_id=" + cityNumber[0] + "&entity_type=zone&radius=25&cuisines=" + cityNumber[0]
     // console.log(cityNumber[0]);
     // console.log(cityCuisine[0]);
     
     
           $.ajax({
-              url:queryURL3,
+              url:queryURL2,
               type:"GET",
               crossDomain: true,
               headers:{
