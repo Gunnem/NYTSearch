@@ -21,44 +21,57 @@
           <h1 class="text-center">Food Fiends!</h1>
       </div>
     <div class="container-fluid" id="wrap">
-    	
-    
-	    
-	    
-		
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="buttonArea"></div>
-		</div>
-
-	
-		<div class="row">
-			<div id="cuisineBox" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        
+        <div id="searchBar" class= "row">
+            <div class= "col-xs-4 col-sm-4 col-md-4 col-lg-4 center-block">
                 <form>
                     <div class="form-group">
-                        <label for="topicInput">Cuisine Type</label>
-                        <input type="text" class="form-control" id="topicInput" placeholder="What kind of food are you looking for?">
+                        <label for="cityInput">Search City</label>
+                        <input type="text" class="form-control" id="cityInput" placeholder="What city would you like to search?">
+                        <button type="submit" id="submitButton" class="btn submit btn-primary" data="submitBtn">Search</button>
                     </div>
                 </form>
             </div>
-			
-				
-			<div id="zipBox" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-				<form>
-				  <fieldset>
-				  	<label for="topic-input">Zip Code</label><br>
-				    <input type="text" placeholder="Enter your zip code" id="zipCode">
-				    <button type="submit" id="submitButton" class="btn submit btn-primary" data="submitBtn">Submit</button>
-				  </fieldset>
-				</form>
-			</div>
         </div>
+
+		<div id= "buttonArea" class="row">
+                <div class="container col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <img id="bbq" class="img-thumbnail" src="assets/images/bbq.jpg" alt="BBQ">
+                    <h1>BBQ</h1>
+                </div>
+                <div class="container col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <img id="greek" class="img-thumbnail" src="assets/images/greek.jpg" alt="Greek">
+                    <h1>Greek</h1>
+                </div>
+                <div class="container col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <img id="thai" class="img-thumbnail" src="assets/images/thai.jpg" alt="Thai">
+                    <h1>Thai</h1>
+                </div>
+                <div class="container col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <img id="chinese" class="img-thumbnail" src="assets/images/chinese.jpg" alt="Chinese">
+                    <h1>Chinese</h1>
+                </div>
+                <div class="container col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <img id="pizza" class="img-thumbnail" src="assets/images/pizza.jpg" alt="Pizza">
+                    <h1>Pizza</h1>
+                </div>
+                <div class="container col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <img id="burgers" class="img-thumbnail" src="assets/images/burgers.jpg" alt="Burgers">
+                    <h1>Burgers</h1>
+                </div>
+
+            </div>
+		</div>
+
+	
         <div class="row">
-            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+                    <div id="listBox"></div>
+                </div>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                 <div id="mapBox"></div>
             </div>
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
-                <div id="listBox" class="border border-dark"></div>
-            </div>
+            
         </div>	
 		<!-- <script>
                 

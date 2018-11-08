@@ -2,6 +2,10 @@
 #mapBox {
     height: 500px;
 }
-#listBox {
-    border: 2px;
+.img-thumbnail{
+    height: 200px;
+    width: 200px;
+}
+.container{
+    display: inline-block;
 }
