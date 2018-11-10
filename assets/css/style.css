@@ -9,3 +9,7 @@
 .container{
     display: inline-block;
 }
+#images{
+    height: 50%;
+    width: 50%;
+}

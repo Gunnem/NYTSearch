@@ -1,141 +1,53 @@
-console.log(latPush);
-console.log(lngPush);
 
 
-function initMap(){
-    setTimeout(function(){
-    // Map options
-    var options = {
-      zoom:12,
-      center:{lat:latPush[0], lng:lngPush[0]}
-    }
-   
-    // New map
-    var map = new google.maps.Map(document.getElementById('mapBox'), options);
-     
-    //  console.log(latPush);
-    //  console.log(lngPush);
-     
-     
-
-    var markers = [
-      {
-      coords:{lat:latPush[0], lng:lngPush[0]},
-      content:'<h1>hello</h1>',
-      },
-      {
-        coords:{lat:latPush[1], lng:lngPush[1]},
-        content:'<h1>hello again</h1>',
-      },
-      {
-        coords:{lat:latPush[2], lng:lngPush[2]},
-        content:'<h1>The Greek Theatre</h1>',
-      },
-      {
-      coords:{lat:latPush[3], lng:lngPush[3]},
-      content:'<h1>lslalalal</h1>',
-      },
-      {
-        coords:{lat:latPush[4], lng:lngPush[4]},
-        content:'<h1>hello again</h1>',
-      },
-      {
-        coords:{lat:latPush[5], lng:lngPush[5]},
-        content:'<h1>hello</h1>',
-        },
-        {
-          coords:{lat:latPush[6], lng:lngPush[6]},
-          content:'<h1>hello again</h1>',
-        },
-        {
-          coords:{lat:latPush[7], lng:lngPush[7]},
-          content:'<h1>The Greek Theatre</h1>',
-        },
-        {
-        coords:{lat:latPush[8], lng:lngPush[8]},
-        content:'<h1>hello</h1>',
-        },
-        {
-          coords:{lat:latPush[9], lng:lngPush[9]},
-          content:'<h1>hello again</h1>',
-        },
-        {
-          coords:{lat:latPush[10], lng:lngPush[10]},
-          content:'<h1>hello</h1>',
-          },
-          {
-            coords:{lat:latPush[11], lng:lngPush[11]},
-            content:'<h1>hello again</h1>',
-          },
-          {
-            coords:{lat:latPush[12], lng:lngPush[12]},
-            content:'<h1>The Greek Theatre</h1>',
-          },
-          {
-          coords:{lat:latPush[13], lng:lngPush[13]},
-          content:'<h1>hello</h1>',
-          },
-          {
-            coords:{lat:latPush[14], lng:lngPush[14]},
-            content:'<h1>hello again</h1>',
-          },
-          {
-            coords:{lat:latPush[15], lng:lngPush[15]},
-            content:'<h1>hello</h1>',
-            },
-            {
-              coords:{lat:latPush[16], lng:lngPush[16]},
-              content:'<h1>hello again</h1>',
-            },
-            {
-              coords:{lat:latPush[17], lng:lngPush[17]},
-              content:'<h1>The Greek Theatre</h1>',
-            },
-            {
-            coords:{lat:latPush[18], lng:lngPush[18]},
-            content:'<h1>hello</h1>',
-            },
-            {
-              coords:{lat:latPush[19], lng:lngPush[19]},
-              content:'<h1>hello again</h1>',
-            },
-      
-    ];
+$("#submitButton").on("click", function(event) {
+    event.preventDefault();
   
-// console.log(markers);
+    // This line grabs the input from the textbox
+   var cityName1 = $("#cityInput").val().trim();
+    cityName.push(cityName1)
+    $('.cuisine').show();
 
-    // Loop through markers
-    for(var i = 0;i < markers.length;i++){
-      // Add marker
-      addMarker(markers[i]);
-    }
- 
-    // Add Marker Function
-    function addMarker(props){
-      var marker = new google.maps.Marker({
-        position:props.coords,
-        map:map,
-        //icon:props.iconImage
-      });
+});
+// $("submitButton").click(function(){
+//     $.getScript("assets_javascript_zomato.js");
+//   }); 
+var cityName = []
+var cuisineGlobal = []
 
-      // Check for customicon
-      if(props.iconImage){
-        // Set icon image
-        marker.setIcon(props.iconImage);
-      }
+// var cuisineIndex = ["193", "168","25", "156", "82", "95"]
+// var cuisineType = ["BBQ", "Burger", "chinese", "Greek", "Pizza", "Thai"]
+// function renderButtons() {
 
-      // Check content
-      if(props.content){
-        var infoWindow = new google.maps.InfoWindow({
-          content:props.content
-        });
+    
 
-        marker.addListener('click', function(){
-          infoWindow.open(map, marker);
-        });
-       
-        
-      }
-    }
-  }, 4000);   
-  }
+//     // Looping through the array of movies
+//     for (var i = 0; i < cuisineIndex.length; i++) {
+
+//       // Then dynamically generating buttons for each movie in the array
+//       // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
+//       var a = $("<button>");
+//       // Adding a class of movie to our button
+//       a.addClass("cuisine");
+//       // Adding a data-attribute
+//       a.attr("data-name", cuisineIndex[i]);
+//       // Providing the initial button text
+//       a.text(cuisineType[i]);
+//       // Adding the button to the buttons-view div
+//       $("#buttonArea").append(a);
+//     }
+//   }
+// renderButtons()
+
+
+function displayCuisineInfo() {
+var data = $(this).attr("data-name");
+
+cuisineGlobal.push(parseFloat(data))
+$.getScript("http://10.0.1.66:8080/assets/javascript/zomato.js");
+
+}
+
+$('.cuisine').hide();
+$(document).on("click", ".cuisine", displayCuisineInfo);
+
