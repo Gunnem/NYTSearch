@@ -1,4 +1,3 @@
-
 #mapBox {
     height: 500px;
 }
@@ -8,4 +7,8 @@
 }
 .container{
     display: inline-block;
+}
+.big-banner{
+    background-image: url(../images/header.png);
+    background-size: 100%;
 }
